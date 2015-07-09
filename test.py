@@ -1,6 +1,6 @@
 '''Converts a cURL command to code for Python Requests'''
 
-from curl_to_requests import curl_to_requests
+import curl_to_requests
 
 curl_cmd = '''curl 'https://github.com/mosesschwartz/curl_to_requests' \\
     -H 'Accept-Encoding: gzip, deflate, sdch' \\
