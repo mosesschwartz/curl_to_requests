@@ -130,7 +130,10 @@ def curl_to_requests(curl_str):
         raise ValueError("Could not parse arguments.")
 
     url = args.target_url
-    http_action = args.request.lower()
+    try:
+        http_action = args.request.lower()
+    except AttributeError:
+        http_action = args.request[0].lower()
     header_dict = {h[0].split(':')[0]:h[0].split(':')[1]
                    for h in args.header}
 
