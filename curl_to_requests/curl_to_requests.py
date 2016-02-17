@@ -134,7 +134,7 @@ def curl_to_requests(curl_str):
         http_action = args.request.lower()
     except AttributeError:
         http_action = args.request[0].lower()
-    header_dict = {h[0].split(':')[0]:h[0].split(':')[1]
+    header_dict = {h[0].split(':')[0]:  "".join(h[0].split(':')[1:])
                    for h in args.header}
 
     params_dict = {}#''.join(args.data_urlencode) #BROKEN
