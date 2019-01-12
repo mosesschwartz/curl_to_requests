@@ -13,5 +13,5 @@ curl_cmd = '''curl 'https://github.com/mosesschwartz/curl_to_requests' \\
     -H 'Referer: https://github.com/mosesschwartz/curl_to_requests' \\
     -H 'Connection: keep-alive' --compressed'''
 
-print curl_to_requests.curl_to_requests(curl_cmd)
+print curl_to_requests(curl_cmd)
 ```
